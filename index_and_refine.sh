@@ -1,5 +1,5 @@
-data_dir_glob=/home/kmdalton/xtal/kiw/20200313/? 
-results_filename=/home/kmdalton/opt/east/log.txt 
+data_dir_glob=$HOME/xtal/kiw/20200313/? 
+results_filename=$HOME/opt/east/log.txt 
 cwd=`pwd`
 
 procs=10 #number of processors to use for spot finding
