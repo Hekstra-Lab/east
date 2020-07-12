@@ -54,6 +54,8 @@ with TemporaryDirectory() as workdir:
         g = e.goniometer
         s = e.scan
 
+        phi = s.get_oscillation()[0]
+        c.rotate_around_origin(g.get_rotation_axis(), phi)
         A,B,C = list(c.get_real_space_vectors())
 
         first_image = e.imageset.get_image_identifier(0)    
@@ -62,9 +64,9 @@ with TemporaryDirectory() as workdir:
         goniometer rotation axis: {}
         incoming beam wavevector: {}
         first image phi: {}
-        Real space axes at phi=0
+        Real space axes at phi:{}
             A axis:  {:8.3f}, {:8.3f}, {:8.3f}
             B axis:  {:8.3f}, {:8.3f}, {:8.3f}
             C axis:  {:8.3f}, {:8.3f}, {:8.3f}
-        """.format(first_image, g.get_rotation_axis(), b.get_s0(), s.get_oscillation()[0], *(A+B+C)))
+        """.format(first_image, g.get_rotation_axis(), b.get_s0(), phi, phi, *(A+B+C)))
 
