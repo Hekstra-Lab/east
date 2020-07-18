@@ -6,6 +6,7 @@ from tempfile import TemporaryDirectory
 from multiprocessing import cpu_count
 from dxtbx.model.experiment_list import ExperimentListFactory
 from os import devnull
+from os.path import abspath
 import numpy as np
 
 parser = ArgumentParser()
@@ -18,6 +19,7 @@ procs = cpu_count()
 gain = parser.gain
 spacegroup = parser.space_group
 images = parser.images
+images = [abspath(i) for i in images]
 
 class DIALSError(Exception):
     """Errors from DIALS subprocess calls"""
