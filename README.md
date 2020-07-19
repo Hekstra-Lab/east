@@ -25,24 +25,22 @@ To run east, just type:
 `./east -s 19 -g 6. data/A1_0deg_1_000??.mccd data/A1_90deg_2_000??.mccd`
 
 to output the following analysis:
-
-    Analysis of wedge starting with image: /home/kmdalton/opt/east/data/A1_0deg_1_00001.mccd     
-    goniometer rotation axis: (1.0, 0.0, 0.0)                                                    
-    incoming beam wavevector: (-0.0007926852706686243, 0.0, -0.8368267109831029)                 
-    first image phi: 81.02                                                                       
-    Real space axes at phi:81.02                                                                 
-        A axis:   -51.482,    2.792,   -4.415                                                    
-        B axis:     6.211,   22.072,  -58.465                                                    
-        C axis:    -1.428,  -65.947,  -25.048                                                    
-                                                                                                 
-                                                                                                 
-    Analysis of wedge starting with image: /home/kmdalton/opt/east/data/A1_90deg_2_00001.mccd    
-    goniometer rotation axis: (1.0, 0.0, 0.0)                                                    
-    incoming beam wavevector: (-0.0007926852706686243, 0.0, -0.8368267109831029)                 
-    first image phi: 171.02                                                                      
-    Real space axes at phi:171.02                                                                
-        A axis:   -51.482,    4.415,    2.792                                                    
-        B axis:     6.211,   58.465,   22.072                                                    
-        C axis:    -1.428,   25.048,  -65.947                                                    
-                                                                                             
+    nalysis of wedge starting with image: /home/kmdalton/opt/east/data2/A1_0deg_1_00001.mccd   
+    goniometer rotation axis: (1.0, 0.0, 0.0)                                                   
+    incoming beam wavevector: (-0.00039032492293883766, 0.0, -0.8368269953886467)               
+    first image phi: 81.02                                                                      
+    Real space axes at phi:81.02                                                                
+        A axis:   -51.387,    2.823,   -4.439                                                   
+        B axis:     6.252,   22.047,  -58.353                                                   
+        C axis:    -1.454,  -65.830,  -25.027                                                   
+                                                                                                
+                                                                                                
+    Analysis of wedge starting with image: /home/kmdalton/opt/east/data2/A1_90deg_2_00001.mccd  
+    goniometer rotation axis: (1.0, 0.0, 0.0)                                                   
+    incoming beam wavevector: (-0.00039032492293883766, 0.0, -0.8368269953886467)               
+    first image phi: 171.02                                                                     
+    Real space axes at phi:171.02                                                               
+        A axis:   -51.387,    4.439,    2.823                                                   
+        B axis:     6.252,   58.353,   22.047                                                   
+        C axis:    -1.454,   25.027,  -65.830                                                   
 
