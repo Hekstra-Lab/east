@@ -25,7 +25,9 @@ To run east, just type:
 `./east -s 19 -g 6. data/A1_0deg_1_000??.mccd data/A1_90deg_2_000??.mccd`
 
 to output the following analysis:
-    nalysis of wedge starting with image: /home/kmdalton/opt/east/data2/A1_0deg_1_00001.mccd   
+
+
+    Analysis of wedge starting with image: /home/kmdalton/opt/east/data2/A1_0deg_1_00001.mccd   
     goniometer rotation axis: (1.0, 0.0, 0.0)                                                   
     incoming beam wavevector: (-0.00039032492293883766, 0.0, -0.8368269953886467)               
     first image phi: 81.02                                                                      
