@@ -3,11 +3,16 @@
 from subprocess import Popen,PIPE
 from argparse import ArgumentParser
 from tempfile import TemporaryDirectory
+from copy import deepcopy
 from multiprocessing import cpu_count
 from dxtbx.model.experiment_list import ExperimentListFactory
 from os import devnull
 from os.path import abspath
 import numpy as np
+from cctbx import crystal_orientation
+from tqdm import tqdm
+from scitbx.matrix import sqr
+import math
 
 parser = ArgumentParser()
 parser.add_argument(dest="images", nargs='+', type=str, help="Image filenames")
@@ -23,6 +28,7 @@ images = [abspath(i) for i in images]
 
 class DIALSError(Exception):
     """Errors from DIALS subprocess calls"""
+
 
 def call_dials(command, workdir='.'):
     with open(devnull, 'w') as out:
@@ -50,8 +56,10 @@ with TemporaryDirectory() as workdir:
 
     elist = ExperimentListFactory.from_json_file(inFN)
 
+    crystal_orientations = []
+
     for e in elist:
-        c = e.crystal
+        c = deepcopy(e.crystal)
         b = e.beam
         g = e.goniometer
         s = e.scan
